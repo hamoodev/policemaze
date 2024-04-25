@@ -52,10 +52,11 @@ let files = [
 ];
 
 const resources = new Resources(files);
-await resources.loadAll();
+
 
 // Setup our scene
-function setup() {
+async function setup() {
+  await resources.loadAll();
   const overlay = document.getElementById("overlay");
   overlay.remove();
 
